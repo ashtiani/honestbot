@@ -586,7 +586,7 @@ function sendGenericMessage(recipientId) {
             title: "rift",
             subtitle: "Next-generation virtual reality",
             item_url: "https://www.honest.com/baby",
-            image_url: SERVER_URL + "/assets/rift.png",
+            image_url: "https://i.thcdn.co/uploads/media/file/000/012/239/zDL5Fgrr.png",
             buttons: [{
               type: "web_url",
               url: "https://www.honest.com/baby",
@@ -600,7 +600,7 @@ function sendGenericMessage(recipientId) {
             title: "touch",
             subtitle: "Your Hands, Now in VR",
             item_url: "https://www.honest.com/baby",
-            image_url: SERVER_URL + "/assets/touch.png",
+            image_url: "https://i.thcdn.co/uploads/media/file/000/012/239/zDL5Fgrr.png",
             buttons: [{
               type: "web_url",
               url: "https://www.honest.com/baby",
