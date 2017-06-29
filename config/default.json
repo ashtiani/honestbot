@@ -2,5 +2,5 @@
     "appSecret": "45797b7ed34c8ed5510f38292e6c3b8d",
     "pageAccessToken": "EAAErnRniJjgBAPJRU06He5kBBoJv3vZC8ZAwMFlY59V0ZCbAnq1gPafQcp0xeMBP8Ci4zsjuce9WhoWZAIV8AfjjTIMdLanZB1p2fynSLRqQwCAGjZAjUsEpWUJSSeRin8uZC7kJTiJ5tS0cw1ZA01cprowZBYjtxnLJzTCj1pQpbJwZDZD",
     "validationToken": "honest-is-the-best",
-    "serverURL": ""
+    "serverURL": "https://honestbot.herokuapp.com"
 }
