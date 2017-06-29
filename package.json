@@ -1,7 +1,7 @@
 {
   "name": "messenger-get-started",
   "version": "1.0.0",
-  "description": "Get started example for Messenger Platform",
+  "description": "honestbot is the best bot",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fbsamples/messenger-platform-samples.git"
+    "url": "https://github.com/ashtiani/honestbot.git"
   },
   "author": "Facebook",
   "license": "ISC",
