@@ -549,7 +549,7 @@ function sendButtonMessage(recipientId) {
           text: "This is test text",
           buttons:[{
             type: "web_url",
-            url: "https://www.oculus.com/en-us/rift/",
+            url: "https://www.honest.com/baby",
             title: "Open Web URL"
           }, {
             type: "postback",
