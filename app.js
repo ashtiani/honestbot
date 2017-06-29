@@ -585,11 +585,11 @@ function sendGenericMessage(recipientId) {
           elements: [{
             title: "rift",
             subtitle: "Next-generation virtual reality",
-            item_url: "https://www.oculus.com/en-us/rift/",
+            item_url: "https://www.honest.com/baby",
             image_url: SERVER_URL + "/assets/rift.png",
             buttons: [{
               type: "web_url",
-              url: "https://www.oculus.com/en-us/rift/",
+              url: "https://www.honest.com/baby",
               title: "Open Web URL"
             }, {
               type: "postback",
@@ -599,11 +599,11 @@ function sendGenericMessage(recipientId) {
           }, {
             title: "touch",
             subtitle: "Your Hands, Now in VR",
-            item_url: "https://www.oculus.com/en-us/touch/",
+            item_url: "https://www.honest.com/baby",
             image_url: SERVER_URL + "/assets/touch.png",
             buttons: [{
               type: "web_url",
-              url: "https://www.oculus.com/en-us/touch/",
+              url: "https://www.honest.com/baby",
               title: "Open Web URL"
             }, {
               type: "postback",
