@@ -307,8 +307,7 @@ function receivedMessage(event) {
         sendAccountLinking(senderID);
         break;
 
-      default:
-        sendTextMessage(senderID, "I can't help you!");
+      
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
