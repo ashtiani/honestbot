@@ -241,7 +241,7 @@ function receivedMessage(event) {
       messageId, appId, metadata);
     return;
   } else if (quickReply) {
-    var quickReplyPayload = "I don't like you";
+    var quickReplyPayload = "quickReply.payload";
     console.log("Quick reply for message %s with payload %s",
       messageId, quickReplyPayload);
 
@@ -308,7 +308,7 @@ function receivedMessage(event) {
         break;
 
       default:
-        sendTextMessage(senderID, messageText);
+        sendTextMessage(senderID, "I can't help you!");
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
