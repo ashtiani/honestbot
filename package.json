@@ -1,27 +1,18 @@
 {
-  "name": "messenger-get-started",
+  "name": "honest-bot",
   "version": "1.0.0",
-  "description": "honestbot is the best bot",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "lint": "jshint --exclude node_modules .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ashtiani/honestbot.git"
-  },
-  "author": "Facebook",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "config": "^1.26.1",
-    "ejs": "^2.4.2",
-    "express": "^4.15.3",
-    "request": "^2.72.0"
-  },
-  "engines": {
-    "node": "~4.1.2"
+    "apiai": "^4.0.0",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "gettyimages-api": "^2.2.0",
+    "request": "^2.79.0"
   }
 }
