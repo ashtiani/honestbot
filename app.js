@@ -119,28 +119,28 @@ app.post('/webhook', function (req, res) {
   }
 });
 
-// /*
-//  * This path is used for account linking. The account linking call-to-action
-//  * (sendAccountLinking) is pointed to this URL.
-//  *
-//  */
-// app.get('/authorize', function(req, res) {
-//   var accountLinkingToken = req.query.account_linking_token;
-//   var redirectURI = req.query.redirect_uri;
-//
-//   // Authorization Code should be generated per user by the developer. This will
-//   // be passed to the Account Linking callback.
-//   var authCode = "1234567890";
-//
-//   // Redirect users to this URI on successful login
-//   var redirectURISuccess = redirectURI + "&authorization_code=" + authCode;
-//
-//   res.render('authorize', {
-//     accountLinkingToken: accountLinkingToken,
-//     redirectURI: redirectURI,
-//     redirectURISuccess: redirectURISuccess
-//   });
-// });
+/*
+ * This path is used for account linking. The account linking call-to-action
+ * (sendAccountLinking) is pointed to this URL.
+ *
+ */
+app.get('/authorize', function(req, res) {
+  var accountLinkingToken = req.query.account_linking_token;
+  var redirectURI = req.query.redirect_uri;
+
+  // Authorization Code should be generated per user by the developer. This will
+  // be passed to the Account Linking callback.
+  var authCode = "1234567890";
+
+  // Redirect users to this URI on successful login
+  var redirectURISuccess = redirectURI + "&authorization_code=" + authCode;
+
+  res.render('authorize', {
+    accountLinkingToken: accountLinkingToken,
+    redirectURI: redirectURI,
+    redirectURISuccess: redirectURISuccess
+  });
+});
 
 /*
  * Verify that the callback came from Facebook. Using the App Secret from
@@ -241,7 +241,7 @@ function receivedMessage(event) {
       messageId, appId, metadata);
     return;
   } else if (quickReply) {
-    var quickReplyPayload = "quickReply.payload";
+    var quickReplyPayload = quickReply.payload;
     console.log("Quick reply for message %s with payload %s",
       messageId, quickReplyPayload);
 
@@ -308,7 +308,7 @@ function receivedMessage(event) {
         break;
 
       default:
-        sendTextMessage(senderID, "messageText");
+        sendTextMessage(senderID, messageText);
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
@@ -549,7 +549,7 @@ function sendButtonMessage(recipientId) {
           text: "This is test text",
           buttons:[{
             type: "web_url",
-            url: "https://www.honest.com/baby",
+            url: "https://www.oculus.com/en-us/rift/",
             title: "Open Web URL"
           }, {
             type: "postback",
@@ -585,11 +585,11 @@ function sendGenericMessage(recipientId) {
           elements: [{
             title: "rift",
             subtitle: "Next-generation virtual reality",
-            item_url: "https://www.honest.com/baby",
-            image_url: "https://i.thcdn.co/uploads/media/file/000/012/239/zDL5Fgrr.png",
+            item_url: "https://www.oculus.com/en-us/rift/",
+            image_url: SERVER_URL + "/assets/rift.png",
             buttons: [{
               type: "web_url",
-              url: "https://www.honest.com/baby",
+              url: "https://www.oculus.com/en-us/rift/",
               title: "Open Web URL"
             }, {
               type: "postback",
@@ -599,11 +599,11 @@ function sendGenericMessage(recipientId) {
           }, {
             title: "touch",
             subtitle: "Your Hands, Now in VR",
-            item_url: "https://www.honest.com/baby",
-            image_url: "https://i.thcdn.co/uploads/media/file/000/012/239/zDL5Fgrr.png",
+            item_url: "https://www.oculus.com/en-us/touch/",
+            image_url: SERVER_URL + "/assets/touch.png",
             buttons: [{
               type: "web_url",
-              url: "https://www.honest.com/baby",
+              url: "https://www.oculus.com/en-us/touch/",
               title: "Open Web URL"
             }, {
               type: "postback",
