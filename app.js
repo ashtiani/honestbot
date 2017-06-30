@@ -119,28 +119,28 @@ app.post('/webhook', function (req, res) {
   }
 });
 
-/*
- * This path is used for account linking. The account linking call-to-action
- * (sendAccountLinking) is pointed to this URL.
- *
- */
-app.get('/authorize', function(req, res) {
-  var accountLinkingToken = req.query.account_linking_token;
-  var redirectURI = req.query.redirect_uri;
-
-  // Authorization Code should be generated per user by the developer. This will
-  // be passed to the Account Linking callback.
-  var authCode = "1234567890";
-
-  // Redirect users to this URI on successful login
-  var redirectURISuccess = redirectURI + "&authorization_code=" + authCode;
-
-  res.render('authorize', {
-    accountLinkingToken: accountLinkingToken,
-    redirectURI: redirectURI,
-    redirectURISuccess: redirectURISuccess
-  });
-});
+// /*
+//  * This path is used for account linking. The account linking call-to-action
+//  * (sendAccountLinking) is pointed to this URL.
+//  *
+//  */
+// app.get('/authorize', function(req, res) {
+//   var accountLinkingToken = req.query.account_linking_token;
+//   var redirectURI = req.query.redirect_uri;
+//
+//   // Authorization Code should be generated per user by the developer. This will
+//   // be passed to the Account Linking callback.
+//   var authCode = "1234567890";
+//
+//   // Redirect users to this URI on successful login
+//   var redirectURISuccess = redirectURI + "&authorization_code=" + authCode;
+//
+//   res.render('authorize', {
+//     accountLinkingToken: accountLinkingToken,
+//     redirectURI: redirectURI,
+//     redirectURISuccess: redirectURISuccess
+//   });
+// });
 
 /*
  * Verify that the callback came from Facebook. Using the App Secret from
@@ -241,7 +241,7 @@ function receivedMessage(event) {
       messageId, appId, metadata);
     return;
   } else if (quickReply) {
-    var quickReplyPayload = quickReply.payload;
+    var quickReplyPayload = "I don't like you";
     console.log("Quick reply for message %s with payload %s",
       messageId, quickReplyPayload);
 
